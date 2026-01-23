@@ -1,0 +1,80 @@
+/* Fake Terminal Animations */
+@keyframes slide-in-arrow {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glow-in {
+  from {
+    background-color: rgba(34, 211, 238, 0);
+  }
+  to {
+    background-color: rgba(34, 211, 238, 0.1);
+  }
+}
+
+/* Fake Terminal Components */
+.fake-terminal-prompt {
+  @apply font-mono text-sm text-white;
+}
+
+.fake-terminal-user {
+  @apply text-cyan-400;
+}
+
+.fake-terminal-host {
+  @apply text-gray-500;
+}
+
+.fake-terminal-separator {
+  @apply text-gray-700;
+}
+
+.fake-terminal-cmd {
+  @apply text-cyan-400;
+}
+
+.fake-terminal-path {
+  @apply text-gray-300;
+}
+
+.fake-terminal-arrow {
+  @apply text-cyan-300;
+  animation: slide-in-arrow 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.fake-terminal-nav-link-active {
+  animation: glow-in 300ms ease-out;
+}
+
+/* Fake Terminal Text Elements */
+.fake-terminal-text {
+  @apply font-mono text-gray-300;
+}
+
+.fake-terminal-success {
+  @apply text-green-400;
+}
+
+.fake-terminal-error {
+  @apply text-red-400;
+}
+
+.fake-terminal-warning {
+  @apply text-yellow-400;
+}
+
+/* Fake Terminal Containers */
+.fake-terminal-container {
+  @apply bg-slate-950 border border-gray-800 rounded-lg p-4 font-mono text-sm text-gray-300;
+}
+
+.fake-terminal-line {
+  @apply flex items-center gap-2 py-1;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "dabenes-github-io",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "4.3.0",
+    "vue": "3.5.27",
+    "vue-router": "4.6.4",
+    "@nuxtjs/i18n": "^9.0.0",
+    "vue-i18n": "^11.0.0"
+  },
+  "overrides": {
+    "vue-i18n": "^11.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "6.12.2",
+    "@types/node": "22.12.0",
+    "tailwindcss": "3.4.18",
+    "typescript": "5.7.3"
+  }
+}

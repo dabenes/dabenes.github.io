@@ -1,0 +1,247 @@
+{
+  "labels": {
+    "portfolio": "porfolio"
+  },
+  "routes": {
+    "home": "..",
+    "projects": "proyectos",
+    "contact": "contacto"
+  },
+  "hero": {
+    "title": "Backend Developer (.NET) · DevOps-minded · Fullstack cuando sea necesario",
+    "description": "Backend escalable y mantenible, con foco en una arquitectura clara y código pensado para producción. .NET, bases de datos y APIs robustas, diseñadas para entornos reales. Desarrollo full-stack cuando la arquitectura lo requiere. Código que funciona en producción, no solo en local."
+  },
+  "welcome": "Bienvenido a mi porfolio",
+  "categories": {
+    "stack": "STACK",
+    "frontend": "FRONTEND",
+    "infra": "INFRA/DEVOPS",
+    "languages": "LENGUAJES",
+    "practices": "PRÁCTICAS"
+  },
+  "skills": {
+    "stack": {
+      "net8": ".NET 8 (LTS)",
+      "csharp12": "C# 12",
+      "sqlserver": "SQL Server",
+      "orm": "EF Core / Dapper",
+      "restapis": "REST APIs"
+    },
+    "frontend": {
+      "vue3": "Vue 3",
+      "javascript": "JavaScript",
+      "typescript5": "TypeScript 5",
+      "tailwind": "Tailwind CSS",
+      "htmlcss": "HTML / CSS"
+    },
+    "infra": {
+      "docker": "Docker",
+      "gitci": "Git & CI/CD",
+      "cloudflare": "Cloudflare",
+      "ghactions": "GitHub Actions",
+      "linux": "Linux"
+    },
+    "languages": {
+      "csharp": "C#",
+      "tsjs": "TypeScript / JS",
+      "sql": "SQL",
+      "java": "Java",
+      "c_cpp": "C / C++"
+    },
+    "practices": {
+      "cleancode": "Clean Code",
+      "architecture": "Arquitectura",
+      "apidesign": "Diseño de APIs",
+      "testing": "Testing",
+      "observability": "Observabilidad"
+    }
+  },
+  "descriptions": {
+    "stack.net8": {
+      "title": ".NET 8 (LTS)",
+      "body": [
+        "Desarrollo de APIs y servicios en .NET 8 LTS con enfoque en rendimiento y mantenibilidad.",
+        "Uso de Minimal APIs y ASP.NET Core para endpoints limpios, validación y middleware.",
+        "Despliegues en contenedores y pipelines CI/CD para entrega continua."
+      ]
+    },
+    "stack.csharp12": {
+      "title": "C# 12",
+      "body": [
+        "Aplicación de características modernas del lenguaje para código expresivo y seguro.",
+        "Patrones de diseño y principios SOLID en soluciones backend y librerías internas."
+      ]
+    },
+    "stack.sqlserver": {
+      "title": "SQL Server",
+      "body": [
+        "Modelado de datos, consultas optimizadas e índices para rendimiento consistente.",
+        "Migraciones controladas y procedimientos almacenados cuando aportan valor."
+      ]
+    },
+    "stack.orm": {
+      "title": "EF Core / Dapper",
+      "body": [
+        "EF Core para agregados complejos y seguimiento de cambios; Dapper para consultas de alto rendimiento.",
+        "Elección pragmática según el caso de uso y requisitos de latencia."
+      ]
+    },
+    "stack.restapis": {
+      "title": "REST APIs",
+      "body": [
+        "Diseño de contratos estables, versionado, paginación y manejo de errores consistente.",
+        "Autenticación y autorización con JWT/claims y políticas."
+      ]
+    },
+    "frontend.vue3": {
+      "title": "Vue 3",
+      "body": [
+        "Interfaces reactivas con Composition API y componentes desacoplados.",
+        "Integración con APIs backend y estados de carga/errores bien definidos."
+      ]
+    },
+    "frontend.javascript": {
+      "title": "JavaScript",
+      "body": [
+        "Código claro para interacciones del cliente y lógica de presentación.",
+        "Buenas prácticas de modularidad y eventos."
+      ]
+    },
+    "frontend.typescript5": {
+      "title": "TypeScript 5",
+      "body": [
+        "Tipos estrictos y contratos compartidos para reducir errores en tiempo de ejecución.",
+        "DTOs y modelos alineados con el backend."
+      ]
+    },
+    "frontend.tailwind": {
+      "title": "Tailwind CSS",
+      "body": [
+        "Estilos utilitarios para construir UI consistente y mantenible.",
+        "Diseños responsivos sin CSS complejo."
+      ]
+    },
+    "frontend.htmlcss": {
+      "title": "HTML / CSS",
+      "body": [
+        "Maquetación semántica y accesible, foco en legibilidad y rendimiento.",
+        "Optimización de estilos y carga."
+      ]
+    },
+    "infra.docker": {
+      "title": "Docker",
+      "body": [
+        "Empaquetado de servicios .NET y frontend en contenedores reproducibles.",
+        "Optimización de imágenes y multi-stage builds."
+      ]
+    },
+    "infra.gitci": {
+      "title": "Git & CI/CD",
+      "body": [
+        "Flujos de trabajo con ramas limpias, revisiones y automatización de pruebas.",
+        "Pipelines para build, test y despliegue automatizado."
+      ]
+    },
+    "infra.cloudflare": {
+      "title": "Cloudflare",
+      "body": [
+        "Entrega de contenido estático y configuración de DNS, reglas y caché.",
+        "Protecciones básicas y performance en el edge."
+      ]
+    },
+    "infra.ghactions": {
+      "title": "GitHub Actions",
+      "body": [
+        "Workflows para construir y publicar artefactos y contenedores.",
+        "Seguridad de secretos y matrices por entorno."
+      ]
+    },
+    "infra.linux": {
+      "title": "Linux",
+      "body": [
+        "Operación de servicios, scripting y observabilidad básica en entornos Linux.",
+        "Diagnóstico con logs y métricas del sistema."
+      ]
+    },
+    "languages.csharp": {
+      "title": "C#",
+      "body": [
+        "Lenguaje principal para backend con .NET, enfoque en claridad y pruebas.",
+        "Uso de patrones y buenas prácticas modernas."
+      ]
+    },
+    "languages.tsjs": {
+      "title": "TypeScript / JavaScript",
+      "body": [
+        "Desarrollo de UI y scripts de tooling; tipos para robustez y mantenibilidad."
+      ]
+    },
+    "languages.sql": {
+      "title": "SQL",
+      "body": [
+        "Consultas, optimizaciones y tuning de índices orientados a casos reales."
+      ]
+    },
+    "languages.java": {
+      "title": "Java",
+      "body": [
+        "Experiencia previa en proyectos de servicios y utilidades, foco en legibilidad."
+      ]
+    },
+    "languages.c_cpp": {
+      "title": "C / C++",
+      "body": [
+        "Bases de programación de bajo nivel y comprensión de memoria y rendimiento."
+      ]
+    },
+    "practices.cleancode": {
+      "title": "Clean Code",
+      "body": [
+        "Nombres claros, funciones pequeñas y responsabilidades bien definidas."
+      ]
+    },
+    "practices.architecture": {
+      "title": "Arquitectura",
+      "body": [
+        "Diseño modular, separación por capas y dependencias bien gestionadas."
+      ]
+    },
+    "practices.apidesign": {
+      "title": "Diseño de APIs",
+      "body": [
+        "Contratos estables, versionado y convenciones de recursos y errores."
+      ]
+    },
+    "practices.testing": {
+      "title": "Testing",
+      "body": [
+        "Pruebas unitarias para lógica crítica e integración para flujos completos.",
+        "Estrategias de test dobles y datos de prueba representativos."
+      ]
+    },
+    "practices.observability": {
+      "title": "Observabilidad",
+      "body": [
+        "Logging estructurado, métricas y trazas para diagnóstico y monitoreo.",
+        "Alertas y paneles mínimos para salud del sistema."
+      ]
+    }
+  },
+  "panel": {
+    "title": "▶ Experiencia",
+    "closeHint": "[esc] cerrar",
+    "notAvailable": "No hay descripción disponible."
+  },
+  "errors": {
+    "404": "El recurso solicitado no se pudo encontrar en este servidor.",
+    "500": "Error interno del servidor. Algo salió mal por nuestra parte.",
+    "403": "El acceso a este recurso está prohibido.",
+    "401": "Se requiere autenticación para acceder a este recurso.",
+    "default": "Ha ocurrido un error inesperado."
+  },
+  "footer": {
+    "by": "por",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}

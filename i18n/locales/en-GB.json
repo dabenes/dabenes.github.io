@@ -1,0 +1,247 @@
+{
+  "labels": {
+    "portfolio": "portfolio"
+  },
+  "routes": {
+    "home": "..",
+    "projects": "projects",
+    "contact": "contact"
+  },
+  "hero": {
+    "title": "Backend Developer (.NET) · DevOps-minded · Fullstack when needed",
+    "description": "Scalable and maintainable backend, focused on clear architecture and production-ready code. .NET, databases and robust APIs, designed for real-world environments. Full-stack development when architecture requires it. Code that works in production, not just locally."
+  },
+  "welcome": "Welcome to my portfolio",
+  "categories": {
+    "stack": "STACK",
+    "frontend": "FRONTEND",
+    "infra": "INFRA/DEVOPS",
+    "languages": "LANGUAGES",
+    "practices": "PRACTICES"
+  },
+  "skills": {
+    "stack": {
+      "net8": ".NET 8 (LTS)",
+      "csharp12": "C# 12",
+      "sqlserver": "SQL Server",
+      "orm": "EF Core / Dapper",
+      "restapis": "REST APIs"
+    },
+    "frontend": {
+      "vue3": "Vue 3",
+      "javascript": "JavaScript",
+      "typescript5": "TypeScript 5",
+      "tailwind": "Tailwind CSS",
+      "htmlcss": "HTML / CSS"
+    },
+    "infra": {
+      "docker": "Docker",
+      "gitci": "Git & CI/CD",
+      "cloudflare": "Cloudflare",
+      "ghactions": "GitHub Actions",
+      "linux": "Linux"
+    },
+    "languages": {
+      "csharp": "C#",
+      "tsjs": "TypeScript / JS",
+      "sql": "SQL",
+      "java": "Java",
+      "c_cpp": "C / C++"
+    },
+    "practices": {
+      "cleancode": "Clean Code",
+      "architecture": "Architecture",
+      "apidesign": "API Design",
+      "testing": "Testing",
+      "observability": "Observability"
+    }
+  },
+  "descriptions": {
+    "stack.net8": {
+      "title": ".NET 8 (LTS)",
+      "body": [
+        "Building APIs and services in .NET 8 LTS with focus on performance and maintainability.",
+        "Using Minimal APIs and ASP.NET Core for clean endpoints, validation, and middleware.",
+        "Deployments in containers and CI/CD pipelines for continuous delivery."
+      ]
+    },
+    "stack.csharp12": {
+      "title": "C# 12",
+      "body": [
+        "Applying modern language features for expressive and safe code.",
+        "Design patterns and SOLID principles in backend solutions and internal libraries."
+      ]
+    },
+    "stack.sqlserver": {
+      "title": "SQL Server",
+      "body": [
+        "Data modelling, optimised queries and indexes for consistent performance.",
+        "Controlled migrations and stored procedures when they add value."
+      ]
+    },
+    "stack.orm": {
+      "title": "EF Core / Dapper",
+      "body": [
+        "EF Core for complex aggregates and change tracking; Dapper for high-performance queries.",
+        "Pragmatic choice based on use case and latency requirements."
+      ]
+    },
+    "stack.restapis": {
+      "title": "REST APIs",
+      "body": [
+        "Stable contract design, versioning, pagination and consistent error handling.",
+        "Authentication and authorisation with JWT/claims and policies."
+      ]
+    },
+    "frontend.vue3": {
+      "title": "Vue 3",
+      "body": [
+        "Reactive interfaces with Composition API and decoupled components.",
+        "Integration with backend APIs and well-defined loading/error states."
+      ]
+    },
+    "frontend.javascript": {
+      "title": "JavaScript",
+      "body": [
+        "Clean code for client interactions and presentation logic.",
+        "Best practices in modularity and events."
+      ]
+    },
+    "frontend.typescript5": {
+      "title": "TypeScript 5",
+      "body": [
+        "Strict types and shared contracts to reduce runtime errors.",
+        "DTOs and models aligned with the backend."
+      ]
+    },
+    "frontend.tailwind": {
+      "title": "Tailwind CSS",
+      "body": [
+        "Utility-first styles to build consistent and maintainable UI.",
+        "Responsive designs without complex CSS."
+      ]
+    },
+    "frontend.htmlcss": {
+      "title": "HTML / CSS",
+      "body": [
+        "Semantic and accessible layouts, focused on readability and performance.",
+        "Style optimisation and loading."
+      ]
+    },
+    "infra.docker": {
+      "title": "Docker",
+      "body": [
+        "Packaging .NET services and frontend in reproducible containers.",
+        "Image optimisation and multi-stage builds."
+      ]
+    },
+    "infra.gitci": {
+      "title": "Git & CI/CD",
+      "body": [
+        "Workflows with clean branches, reviews and test automation.",
+        "Pipelines for build, test and automated deployment."
+      ]
+    },
+    "infra.cloudflare": {
+      "title": "Cloudflare",
+      "body": [
+        "Static content delivery and DNS configuration, rules and caching.",
+        "Basic protections and edge performance."
+      ]
+    },
+    "infra.ghactions": {
+      "title": "GitHub Actions",
+      "body": [
+        "Workflows to build and publish artefacts and containers.",
+        "Secret security and environment matrices."
+      ]
+    },
+    "infra.linux": {
+      "title": "Linux",
+      "body": [
+        "Service operation, scripting and basic observability in Linux environments.",
+        "Diagnostics with logs and system metrics."
+      ]
+    },
+    "languages.csharp": {
+      "title": "C#",
+      "body": [
+        "Primary language for backend with .NET, focus on clarity and testing.",
+        "Use of modern patterns and best practices."
+      ]
+    },
+    "languages.tsjs": {
+      "title": "TypeScript / JavaScript",
+      "body": [
+        "UI development and tooling scripts; types for robustness and maintainability."
+      ]
+    },
+    "languages.sql": {
+      "title": "SQL",
+      "body": [
+        "Queries, optimisations and index tuning for real-world cases."
+      ]
+    },
+    "languages.java": {
+      "title": "Java",
+      "body": [
+        "Previous experience in service projects and utilities, focus on readability."
+      ]
+    },
+    "languages.c_cpp": {
+      "title": "C / C++",
+      "body": [
+        "Low-level programming fundamentals and memory and performance understanding."
+      ]
+    },
+    "practices.cleancode": {
+      "title": "Clean Code",
+      "body": [
+        "Clear names, small functions and well-defined responsibilities."
+      ]
+    },
+    "practices.architecture": {
+      "title": "Architecture",
+      "body": [
+        "Modular design, layered separation and well-managed dependencies."
+      ]
+    },
+    "practices.apidesign": {
+      "title": "API Design",
+      "body": [
+        "Stable contracts, versioning and resource and error conventions."
+      ]
+    },
+    "practices.testing": {
+      "title": "Testing",
+      "body": [
+        "Unit tests for critical logic and integration tests for complete flows.",
+        "Test double strategies and representative test data."
+      ]
+    },
+    "practices.observability": {
+      "title": "Observability",
+      "body": [
+        "Structured logging, metrics and traces for diagnostics and monitoring.",
+        "Minimal alerts and dashboards for system health."
+      ]
+    }
+  },
+  "panel": {
+    "title": "▶ Experience",
+    "closeHint": "[esc] close",
+    "notAvailable": "No description available."
+  },
+  "errors": {
+    "404": "The requested resource could not be found on this server.",
+    "500": "Internal server error. Something went wrong on our end.",
+    "403": "Access to this resource is forbidden.",
+    "401": "Authentication is required to access this resource.",
+    "default": "An unexpected error has occurred."
+  },
+  "footer": {
+    "by": "by",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}
