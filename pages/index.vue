@@ -24,47 +24,32 @@
 <script setup lang="ts">
 import { computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useFakeTerminal } from '~/composables/useTerminalNotification'
 import type { LandingSignalGroup } from '~/components/landing/LandingSkillsGrid.vue'
+import { useLandingSkills } from '~/composables/useLandingSkills'
+import { useFakeTerminal } from '~/composables/useTerminalNotification'
 
 const { info } = useFakeTerminal()
 const { t } = useI18n()
+const { categories } = useLandingSkills()
 
 const config = useRuntimeConfig()
 const ownerName = computed(() => config.public.ownerName || 'David Benito Escribano')
 const ownerNick = computed(() => config.public.ownerNick || 'dabenes')
-const heroTitle = computed(() =>
-  'Backend Engineer (.NET) · APIs · Fullstack cuando hace falta'
-)
-const heroDescription = computed(() =>
-  'Desarrollo servicios y APIs mantenibles con foco en arquitectura por capas, SQL y decisiones tecnicas pensadas para produccion. Mi perfil es principalmente backend en .NET y C#, con capacidad fullstack en Vue y TypeScript cuando el sistema o el producto lo requieren.'
+const heroTitle = computed(() => t('hero.title'))
+const heroDescription = computed(() => t('hero.description'))
+
+const highlights = computed(() =>
+  categories
+    .flatMap((category) => category.items.map((item) => t(item.translationKey)))
+    .filter((value, index, values) => values.indexOf(value) === index)
 )
 
-const highlights = computed(() => [
-  '.NET',
-  'APIs',
-  'SQL',
-  'Arquitectura por capas',
-  'C#',
-  'Vue',
-  'TypeScript',
-  'Tests unitarios'
-])
-
-const signalGroups = computed<LandingSignalGroup[]>(() => [
-  {
-    label: 'Backend',
-    items: ['.NET', 'APIs', 'SQL']
-  },
-  {
-    label: 'Arquitectura',
-    items: ['Arquitectura por capas', 'C#', 'Tests unitarios']
-  },
-  {
-    label: 'Frontend',
-    items: ['Vue', 'TypeScript']
-  }
-])
+const signalGroups = computed<LandingSignalGroup[]>(() =>
+  categories.map((category) => ({
+    label: t(category.titleKey),
+    items: category.items.map((item) => t(item.translationKey))
+  }))
+)
 
 onMounted(() => {
   const hasVisited = localStorage.getItem('portfolio_visited')
