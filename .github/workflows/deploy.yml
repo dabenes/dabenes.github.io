@@ -13,6 +13,14 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NUXT_PUBLIC_OWNER_NAME: ${{ vars.NUXT_PUBLIC_OWNER_NAME }}
+      NUXT_PUBLIC_OWNER_NICK: ${{ vars.NUXT_PUBLIC_OWNER_NICK }}
+      NUXT_PUBLIC_GITHUB_URL: ${{ vars.NUXT_PUBLIC_GITHUB_URL }}
+      NUXT_PUBLIC_LINKEDIN_URL: ${{ vars.NUXT_PUBLIC_LINKEDIN_URL }}
+      NUXT_PUBLIC_CONTACT_EMAIL: ${{ vars.NUXT_PUBLIC_CONTACT_EMAIL }}
+      NUXT_PUBLIC_SITE_TITLE: ${{ vars.NUXT_PUBLIC_SITE_TITLE }}
+      NUXT_PUBLIC_API_BASE_URL: ${{ vars.NUXT_PUBLIC_API_BASE_URL }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
