@@ -1,3 +1,9 @@
+import { readFileSync } from 'node:fs'
+
+const packageJson = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf-8')) as {
+  version?: string
+}
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
@@ -6,11 +12,15 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      ownerName: process.env.NUXT_PUBLIC_OWNER_NAME || 'David Benito Escribano',
-      ownerNick: process.env.NUXT_PUBLIC_OWNER_NICK || 'dabenes',
-      githubUrl: process.env.NUXT_PUBLIC_GITHUB_URL || 'https://github.com/dabenes',
-      linkedinUrl: process.env.NUXT_PUBLIC_LINKEDIN_URL || 'https://linkedin.com/in/dabenes',
-      siteTitle: process.env.NUXT_PUBLIC_SITE_TITLE || 'dabenes.dev'
+      // NO PONER FALLBACKS
+      ownerName: process.env.NUXT_PUBLIC_OWNER_NAME,
+      ownerNick: process.env.NUXT_PUBLIC_OWNER_NICK,
+      githubUrl: process.env.NUXT_PUBLIC_GITHUB_URL,
+      linkedinUrl: process.env.NUXT_PUBLIC_LINKEDIN_URL,
+      contactEmail: process.env.NUXT_PUBLIC_CONTACT_EMAIL,
+      siteTitle: process.env.NUXT_PUBLIC_SITE_TITLE,
+      apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL,
+      portfolioVersion: packageJson.version
     }
   },
 

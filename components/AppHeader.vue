@@ -1,9 +1,9 @@
 <template>
   <header class="sticky top-0 z-50 border-b border-gray-800 bg-slate-950 backdrop-blur-md">
     <div class="container mx-auto px-4">
-      <div class="flex items-center justify-between py-5">
+      <div class="flex items-center justify-between py-2.5">
         <div class="flex items-center gap-4 flex-1">
-          <div class="font-mono text-sm text-white whitespace-nowrap">
+          <div class="font-mono text-[13px] text-white whitespace-nowrap">
             <span class="text-cyan-400">{{ ownerNick }}</span><span class="text-gray-500">@{{ t('labels.portfolio') }}</span><span class="text-gray-500">$</span>
             <span class="text-gray-400 ml-2">{{ promptCommand }}</span>
           </div>
@@ -28,15 +28,16 @@
         </div>
 
         <nav class="hidden items-center gap-3 md:flex">
-          <span v-if="currentPath === '/'" class="group relative px-4 py-2 font-mono text-sm text-gray-400 transition-all duration-300 bg-cyan-500/10 rounded cursor-default">
+            <span v-if="currentPath === '/'" class="group relative px-3.5 py-1 font-mono text-[13px] text-gray-400 transition-all duration-300 bg-cyan-500/10 rounded cursor-default">
             <span class="fake-terminal-arrow">> </span>
             <span class="text-cyan-400">cd </span>
             <span class="text-gray-200">..</span>
+            <span class="absolute inset-x-0 bottom-0 h-px bg-cyan-500"></span>
           </span>
           <NuxtLink 
             v-else
-            to="/" 
-            class="group relative px-4 py-2 font-mono text-sm text-gray-400 transition-all duration-300"
+            :to="homePath" 
+            class="group relative px-3.5 py-1 font-mono text-[13px] text-gray-400 transition-all duration-300"
           >
             <span class="text-cyan-400">cd </span>
             <span class="group-hover:text-white">..</span>
@@ -46,8 +47,21 @@
           <span class="text-gray-700">|</span>
 
           <NuxtLink 
-            to="/projects" 
-            class="group relative px-4 py-2 font-mono text-sm text-gray-400 transition-all duration-300"
+            :to="skillsPath" 
+            class="group relative px-3.5 py-1 font-mono text-[13px] text-gray-400 transition-all duration-300"
+            :class="{ 'text-cyan-400 bg-cyan-500/10 rounded fake-terminal-nav-link-active': currentPath === '/skills' }"
+          >
+            <span class="fake-terminal-arrow" v-if="currentPath === '/skills'">> </span>
+            <span class="text-cyan-400">cd </span>
+            <span class="group-hover:text-white" :class="currentPath === '/skills' ? 'text-gray-200' : ''">{{ t('routes.stack') }}</span>
+            <span class="absolute inset-x-0 bottom-0 h-px bg-cyan-500 scale-x-0 transition-transform duration-300 group-hover:scale-x-100 origin-left" :class="{ 'scale-x-100': currentPath === '/skills' }"></span>
+          </NuxtLink>
+
+          <span class="text-gray-700">|</span>
+
+          <NuxtLink 
+            :to="projectsPath" 
+            class="group relative px-3.5 py-1 font-mono text-[13px] text-gray-400 transition-all duration-300"
             :class="{ 'text-cyan-400 bg-cyan-500/10 rounded fake-terminal-nav-link-active': currentPath === '/projects' }"
           >
             <span class="fake-terminal-arrow" v-if="currentPath === '/projects'">> </span>
@@ -59,8 +73,8 @@
           <span class="text-gray-700">|</span>
 
           <NuxtLink 
-            to="/contact" 
-            class="group relative px-4 py-2 font-mono text-sm text-gray-400 transition-all duration-300"
+            :to="contactPath" 
+            class="group relative px-3.5 py-1 font-mono text-[13px] text-gray-400 transition-all duration-300"
             :class="{ 'text-cyan-400 bg-cyan-500/10 rounded fake-terminal-nav-link-active': currentPath === '/contact' }"
           >
             <span class="fake-terminal-arrow" v-if="currentPath === '/contact'">> </span>
@@ -70,7 +84,7 @@
           </NuxtLink>
         </nav>
 
-        <button class="rounded-md p-2 text-gray-400 transition-all duration-300 hover:text-white md:hidden">
+        <button class="rounded-md p-1 text-gray-400 transition-all duration-300 hover:text-white md:hidden">
           <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -87,19 +101,30 @@ import { useRoute } from '#app'
 import { computed } from 'vue'
 import { useFakeTerminal } from '~/composables/useTerminalNotification'
 import { useI18n } from 'vue-i18n'
+import { useLocalePath } from '#i18n'
 
 const route = useRoute()
-const currentPath = computed(() => route.path)
+const localePath = useLocalePath()
+const normalizedPath = computed(() => {
+  const path = route.path.replace(/^\/(en|es)(?=\/|$)/, '')
+  return path || '/'
+})
+const currentPath = computed(() => normalizedPath.value)
 const { notifications } = useFakeTerminal()
 const config = useRuntimeConfig()
 const ownerNick = computed(() => config.public.ownerNick)
 const { t } = useI18n()
+const homePath = computed(() => localePath('/'))
+const skillsPath = computed(() => localePath('/skills'))
+const projectsPath = computed(() => localePath('/projects'))
+const contactPath = computed(() => localePath('/contact'))
 
 const promptCommand = computed(() => {
-  const path = currentPath.value
+  const path = normalizedPath.value
   if (path === '/') return ''
   
   const routeMap: Record<string, string> = {
+    '/skills': t('routes.stack'),
     '/projects': t('routes.projects'),
     '/contact': t('routes.contact')
   }

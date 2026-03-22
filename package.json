@@ -1,5 +1,6 @@
 {
   "name": "dabenes-github-io",
+  "version": "0.1.0-alpha",
   "type": "module",
   "private": true,
   "scripts": {

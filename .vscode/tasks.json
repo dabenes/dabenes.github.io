@@ -1,0 +1,90 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "nuxt: dev",
+      "type": "shell",
+      "command": "npm.cmd",
+      "args": [
+        "run",
+        "dev"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "custom",
+        "pattern": {
+          "regexp": "^$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".*Building Nuxt for development.*|.*Nuxt 4.*",
+          "endsPattern": ".*Local:.*https?://localhost:\\d+.*"
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": false,
+        "clear": false
+      }
+    },
+    {
+      "label": "nuxt: build",
+      "type": "shell",
+      "command": "npm.cmd",
+      "args": [
+        "run",
+        "build"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false,
+        "clear": true
+      }
+    },
+    {
+      "label": "nuxt: generate",
+      "type": "shell",
+      "command": "npm.cmd",
+      "args": [
+        "run",
+        "generate"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false,
+        "clear": true
+      }
+    },
+    {
+      "label": "nuxt: preview",
+      "type": "shell",
+      "command": "npm.cmd",
+      "args": [
+        "run",
+        "preview"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": false,
+        "clear": true
+      }
+    }
+  ]
+}

@@ -9,7 +9,7 @@ dist
 # Node dependencies
 node_modules
 
-# Lock files (mantener solo uno según package manager usado)
+# Lock files
 # package-lock.json
 # yarn.lock
 # pnpm-lock.yaml
@@ -45,6 +45,17 @@ lerna-debug.log*
 !.env.example
 .env.local
 .env.*.local
+
+# Local planning / internal working docs
+docs/
+!docs/
+docs/*.local.md
+docs/*.private.md
+docs/FOUNDATION.md
+docs/ROADMAP.md
+
+# Local internal working artifacts
+prompts/
 
 # OS
 Thumbs.db
